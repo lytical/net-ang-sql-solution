@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "dotnet",
+      "task": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "label": "dotnet: build"
+    },
+    {
+      "label": "watch",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "watch",
+        "run",
+        "${workspaceFolder}/host/host.csproj"
+      ],
+      "isBackground": true,
+      "dependsOn": "watch client",
+      "problemMatcher": "$msCompile",
+      "options": {
+        "cwd": "${workspaceFolder}/host"
+      }
+    },
+    {
+      "type": "npm",
+      "script": "watch",
+      "path": "client",
+      "group": "test",
+      "isBackground": true,
+      "problemMatcher": "$tsc-watch",
+      "label": "watch client",
+      "detail": "ng build --watch --configuration development"
+    }
+  ]
+}

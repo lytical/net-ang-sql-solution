@@ -1,0 +1,19 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "label": "Watch",
+      "type": "shell",
+      "command": "${workspaceFolder}\\watch.cmd"
+    }
+  ],
+  "configurations": [
+    {
+      "name": "Run and Watch",
+      "type": "coreclr",
+      "request": "attach",
+      "processName": "host.exe",
+      "preLaunchTask": "Watch"
+    }
+  ]
+}

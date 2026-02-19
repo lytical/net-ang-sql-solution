@@ -1,0 +1,6 @@
+@Lyt.Host_HostAddress = http://localhost:5156
+
+GET {{Lyt.Host_HostAddress}}/api/endpoint/
+Accept: application/json
+
+###
