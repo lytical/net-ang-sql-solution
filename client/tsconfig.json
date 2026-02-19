@@ -11,6 +11,11 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "experimentalDecorators": true,
+    "paths": {
+      "site": [
+        "./dist/site"
+      ]
+    },
     "importHelpers": true,
     "target": "ES2022",
     "module": "preserve"
@@ -28,6 +33,12 @@
     },
     {
       "path": "./projects/main/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/site/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/site/tsconfig.spec.json"
     }
   ]
 }
