@@ -5,25 +5,16 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "debug",
-      "type": "coreclr",
-      "request": "launch",
-      "preLaunchTask": "watch",
-      "program": "${workspaceFolder}/host/bin/Debug/net10.0/host.dll",
-      "args": [],
-      "cwd": "${workspaceFolder}/host",
-      "stopAtEntry": false,
-      "console": "internalConsole"
-    },
-    {
-      "name": "C#: host Debug",
+      "name": ".NET Debug",
       "type": "dotnet",
       "request": "launch",
       "projectPath": "${workspaceFolder}/host/host.csproj"
     },
     {
-      "name": ".NET Core Attach",
-      "type": "coreclr"
+      "name": ".NET Attach",
+      "type": "coreclr",
+      "request": "attach",
+      "preLaunchTask": "watch"
     }
   ]
 }

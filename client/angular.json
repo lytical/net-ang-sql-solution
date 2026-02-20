@@ -20,6 +20,11 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": {
+              "browser": "",
+              "base": "../host/wwwroot"
+            },
+            "deleteOutputPath": true,
             "browser": "projects/main/src/main.ts",
             "tsConfig": "projects/main/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -31,7 +36,8 @@
             ],
             "styles": [
               "projects/main/src/styles.scss"
-            ]
+            ],
+            "scripts": []
           },
           "configurations": {
             "production": {

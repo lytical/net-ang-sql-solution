@@ -20,9 +20,16 @@
         "run",
         "${workspaceFolder}/host/host.csproj"
       ],
+      "problemMatcher": {
+        "base": "$msCompile",
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": { "regexp": "Using launch settings from\\s"},
+          "endsPattern": {"regexp": "dotnet watch"}
+        }
+      },
       "isBackground": true,
       "dependsOn": "watch client",
-      "problemMatcher": "$msCompile",
       "options": {
         "cwd": "${workspaceFolder}/host"
       }
@@ -32,8 +39,15 @@
       "script": "watch",
       "path": "client",
       "group": "test",
+      "problemMatcher": {
+        "base": "$tsc",
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": { "regexp": "Application bundle generation (failed|complete)."},
+          "endsPattern": {"regexp": "Output location:\\s"}
+        }
+      },
       "isBackground": true,
-      "problemMatcher": "$tsc-watch",
       "label": "watch client",
       "detail": "ng build --watch --configuration development"
     }

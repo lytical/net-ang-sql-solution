@@ -6,7 +6,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<SpaRoot>..\client</SpaRoot>
 		<SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
-		<SpaProxyServerUrl>https://localhost:62409</SpaProxyServerUrl>
+		<SpaProxyServerUrl>https://localhost:4200</SpaProxyServerUrl>
 		<RootNamespace>Lyt.Host</RootNamespace>
 		<UserSecretsId>b08732c0-1558-4600-b904-df0156ed649e</UserSecretsId>
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
@@ -31,14 +31,5 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
-
-	<!-- <Target Name="NpmBuild" BeforeTargets="Build">
-		<Exec Command="npm install" WorkingDirectory="$(SolutionDir)Client" />
-		<Exec Command="npm run build" WorkingDirectory="$(SolutionDir)Client" />
-	</Target>
-
-	<Target Name="NpmWatch" BeforeTargets="Run">
-		<Exec Command="npm run watch" WorkingDirectory="$(SolutionDir)Client" />
-	</Target> -->
 
 </Project>
